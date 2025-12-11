@@ -2,13 +2,13 @@ import requests
 import json
 import sys
 import os
-import pandas as pd  # <--- A novidade: Importando a biblioteca de tabelas
+import pandas as pd 
 from datetime import datetime
 
 # --- CONFIGURAÇÕES ---
 ZABBIX_URL = "http://localhost/zabbix/api_jsonrpc.php"
 
-# 1. SEGURANÇA (Token via Variável de Ambiente)
+# SEGURANÇA (Token via Variável de Ambiente)
 TOKEN = os.getenv('ZABBIX_TOKEN')
 if not TOKEN:
     print("❌ ERRO: Variável ZABBIX_TOKEN não definida.")
@@ -59,8 +59,7 @@ for h in hosts:
     # Adicionamos um dicionário para cada linha da planilha
     dados_para_excel.append({
         "ID do Zabbix": h['hostid'],
-        "Nome do Servidor": h['name'],
-        "IP/DNS": h['host'], # Nome técnico
+        "Nome do Servidor": h['name'],# Nome técnico
         "Status": "DESABILITADO",
         "Data da Coleta": datetime.now().strftime("%d/%m/%Y %H:%M")
     })
