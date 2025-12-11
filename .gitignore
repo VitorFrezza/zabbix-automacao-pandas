@@ -1,0 +1,29 @@
+# --- Segurança (CRÍTICO) ---
+.env
+token.txt
+senhas.py
+
+# --- Lixo do Python ---
+__pycache__/
+*.py[cod]
+
+# --- Arquivos Gerados (Resultados) ---
+*.xlsx
+*.csv
+
+# --- Meus Rascunhos (Adicione seus arquivos aqui) ---
+teste.py
+rascunho.py
+*backup*
+temp_*
+automacao_zabbix_2.py
+automacao_zabbix.py
+monitoramento.py
+teste_stress.py
+
+# Ignorar o ambiente virtual (MUITO IMPORTANTE)
+venv/
+env/
+
+# Ignorar arquivos do VS Code
+.vscode/
